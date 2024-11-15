@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <main>
+        <div class="container">
+            <h2 class="formHeading">Contact Us</h2>
+            <form  id="myform" onsubmit="return(validate(event))">
+                <div class="nameFields">
+                    <div class="box halfWidth">
+                        <label class="inputLabel">First Name <span class="required">*</span></label>
+                        <input type="text" name="fname" class="textInput" id="fname">
+                        <span class="errorMessage">this field is required</span>
+                    </div>
+                    <div class="box halfWidth">
+                        <label class="inputLabel">Last Name <span class="required">*</span></label>
+                        <input type="text"  class="textInput" id="lname">
+                        <span class="errorMessage">this field is required</span>
+                    </div>
+                </div>
+                <div class="emailField">
+                    <div class="box">
+                        <label class="inputLabel">Email Address <span class="required">*</span></label>
+                        <input type="text" class="textInput" id="email">
+                        <span class="errorMessage">this field is required</span>
+                    </div>
+                </div>
+                <div class="radioField">
+                    <div class="box">
+                        <label class="inputLabel">Query Type <span class="required">*</span></label>
+                        <div class="radioContainer">
+                            <label class="radioLabel">
+                                <label for="ra1" class="customRadio">
+                                    <input type="radio" name="query" id="ra1">
+                                </label>
+                                <span>General Enquiry</span>
+                            </label>
+                            <label class="radioLabel">
+                                <label for="ra2" class="customRadio">
+                                    <input type="radio" name="query" id="ra2">
+                                </label>
+                                <span>Support Request</span>
+                            </label>
+                        </div>
+                        <span class="errorMessage">please select a query type</span>
+                    </div>
+                </div>
+                 <div class="messageField">
+                    <div class="box">
+                        <label class="inputLabel">Message<span class="required">*</span></label>
+                        <input type="text"  class="textInput twiceHeight" id="message">
+                        <span class="errorMessage">this field is required</span>
+                    </div>
+                </div>
+                <div class="acceptfield">
+                    <div>
+                        <label for="checkbox" class="customCheckbox" role="checkbox">
+                            <input type="checkbox" id="checkbox">
+                        </label>
+                        <span>I consent to being contacted by the team <span class="required">*</span></span>
+                    </div>
+                    <span class="errorMessage">to submit this form , please consent to being contacted</span>
+                </div>
+                <button>Submit</button>
+            </form>
+        </div>
+
+        <div class="popUp">
+            <div>
+                <img src="assets/images/icon-success-check.svg" alt="success">
+                <strong>Message Sent!</strong>
+            </div>
+            <p>Thanks for comleting the form. we'll be in touch soon!</p>
+        </div>
+    </main>
+</body>
+</html>
